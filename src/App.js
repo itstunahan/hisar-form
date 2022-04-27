@@ -82,11 +82,13 @@ function App() {
     <Page>
       <Card>
         <Card.Section>
+          <DisplayText size="small">Manevi Sekinetin Hasıl Olduğu</DisplayText>
+          <br />
           <DisplayText element="h1" size="extraLarge">
             Hisar Talebe Yurdu
           </DisplayText>
           <br />
-          <DisplayText>Kayıt Formu</DisplayText>
+          <DisplayText size="small">Kayıt Formu</DisplayText>
         </Card.Section>
         <Card.Section>
           <Form onSubmit={handleSubmit}>
