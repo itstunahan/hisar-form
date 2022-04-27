@@ -7,8 +7,10 @@ import {
   Form,
   TextField,
   Button,
+  Thumbnail,
 } from '@shopify/polaris';
 import { useFormspark } from '@formspark/use-formspark';
+import './index.css';
 
 const FORMSPARK_FORM_ID = '9y0ebmf1';
 
@@ -79,74 +81,81 @@ function App() {
   };
 
   return (
-    <Page>
-      <Card>
-        <Card.Section>
-          <DisplayText size="small">Manevi Sekinetin Hasıl Olduğu</DisplayText>
-          <br />
-          <DisplayText element="h1" size="extraLarge">
-            Hisar Talebe Yurdu
-          </DisplayText>
-          <br />
-          <DisplayText size="small">Kayıt Formu</DisplayText>
-        </Card.Section>
-        <Card.Section>
-          <Form onSubmit={handleSubmit}>
-            <FormLayout>
-              <TextField
-                requiredIndicator
-                value={name}
-                onChange={handleNameChange}
-                label="Adınız Soyadınız: "
-                type="text"
-              />
-              <TextField
-                requiredIndicator
-                value={phoneNumber}
-                onChange={handlePhoneNumberChange}
-                label="Telefon Numaranız: "
-                maxLength="10"
-                minLength="10"
-                type="text"
-                showCharacterCount
-                prefix="+90"
-              />
-              <TextField
-                requiredIndicator
-                value={job}
-                onChange={handleJobChange}
-                label="Meslek: "
-                type="text"
-              />
-              <TextField
-                requiredIndicator
-                value={businessAdress}
-                onChange={handleBusinessAdressChange}
-                label="İş Adresiniz: "
-                type="text"
-                multiline={4}
-              />
-              <TextField
-                requiredIndicator
-                value={yearsYoWereInHisar}
-                onChange={handleYearsYoWereInHisarChange}
-                label="Hisar'da Bulunduğunuz Yıllar: "
-                type="text"
-              />
-              <TextField
-                value={message}
-                onChange={handleMessageChange}
-                label="Bize İletmek İstediğiniz Varsa Mesajınız: "
-                type="text"
-              />
-              <Button fullWidth primary submit>
-                Gönder
-              </Button>
-            </FormLayout>
-          </Form>
-        </Card.Section>
-      </Card>
-    </Page>
+    <div className="FormPageApp">
+      <Page>
+        <Card>
+          <Card.Section>
+            <img src="https://hisarogrenciyurdu.com/Resimler/Hisar-Ogrenci-Yurdu_Logo.jpg" />
+          </Card.Section>
+          <Card.Section>
+            <DisplayText size="small">
+              Manevi Sekinetin Hasıl Olduğu
+            </DisplayText>
+            <br />
+            <DisplayText element="h1" size="extraLarge">
+              Hisar Talebe Yurdu
+            </DisplayText>
+            <br />
+            <DisplayText size="small">Kayıt Formu</DisplayText>
+          </Card.Section>
+          <Card.Section>
+            <Form onSubmit={handleSubmit}>
+              <FormLayout>
+                <TextField
+                  requiredIndicator
+                  value={name}
+                  onChange={handleNameChange}
+                  label="Adınız Soyadınız: "
+                  type="text"
+                />
+                <TextField
+                  requiredIndicator
+                  value={phoneNumber}
+                  onChange={handlePhoneNumberChange}
+                  label="Telefon Numaranız: "
+                  maxLength="10"
+                  minLength="10"
+                  type="text"
+                  showCharacterCount
+                  prefix="+90"
+                />
+                <TextField
+                  requiredIndicator
+                  value={job}
+                  onChange={handleJobChange}
+                  label="Meslek: "
+                  type="text"
+                />
+                <TextField
+                  requiredIndicator
+                  value={businessAdress}
+                  onChange={handleBusinessAdressChange}
+                  label="İş Adresiniz: "
+                  type="text"
+                  multiline={4}
+                />
+                <TextField
+                  requiredIndicator
+                  value={yearsYoWereInHisar}
+                  onChange={handleYearsYoWereInHisarChange}
+                  label="Hisar'da Bulunduğunuz Yıllar: "
+                  type="text"
+                />
+                <TextField
+                  value={message}
+                  onChange={handleMessageChange}
+                  label="Bize İletmek İstediğiniz Varsa Mesajınız: "
+                  type="text"
+                />
+                <Button fullWidth primary submit>
+                  Gönder
+                </Button>
+              </FormLayout>
+            </Form>
+          </Card.Section>
+        </Card>
+      </Page>
+    </div>
   );
 }
 
