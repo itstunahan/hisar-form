@@ -85,7 +85,7 @@ function App() {
       <Page>
         <Card>
           <Card.Section>
-            <img src="https://hisarogrenciyurdu.com/Resimler/Hisar-Ogrenci-Yurdu_Logo.jpg" />
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREn__bUgkD0RHJzO9JAnTVw5qG3_nl8-Lu6D6Pe-qTMmfveHFc" />
           </Card.Section>
           <Card.Section>
             <DisplayText size="small">
